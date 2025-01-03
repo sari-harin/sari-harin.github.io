@@ -2,6 +2,7 @@
 @use '../abstracts/mixins' as mx;
 @use '../abstracts/breakpoints' as bp;
 @use '../abstracts/placeholders';
+@import url('https://fonts.googleapis.com/css2?family=Gothic+A1&family=Jersey+15&display=swap');
 
 $btn-border-width: 3px;
 $btn-mb: 0.5rem;
@@ -102,20 +103,21 @@ $sidebar-display: 'sidebar-display'; /* the attribute for sidebar display */
     @extend %clickable-transition;
     @extend %sidebar-link-hover;
 
-    font-family: inherit;
-    font-weight: 900;
+    font-family: "Jersey 15", serif !important;
+    font-weight: 400;
     font-size: 1.75rem;
     line-height: 1.2;
     letter-spacing: 0.25px;
     margin-top: 1.25rem;
     margin-bottom: 0.5rem;
     width: fit-content;
-    color: var(--site-title-color);
+    color: white;
   }
 
   .site-subtitle {
     font-size: 95%;
-    color: var(--site-subtitle-color);
+    color: #297eff;
+    font-weight: 700;
     margin-top: 0.25rem;
     word-spacing: 1px;
     -webkit-user-select: none;
