@@ -4,6 +4,7 @@
 @use '../abstracts/placeholders';
 @use '../themes/light';
 @use '../themes/dark';
+@import url('https://fonts.googleapis.com/css2?family=Gothic+A1&display=swap');
 
 :root {
   font-size: 16px;
@@ -43,7 +44,7 @@ body {
     env(safe-area-inset-bottom) env(safe-area-inset-left);
   color: var(--text-color);
   -webkit-font-smoothing: antialiased;
-  font-family: v.$font-family-base;
+  font-family: "Gothic A1", serif;
 }
 
 h1.dynamic-title {
