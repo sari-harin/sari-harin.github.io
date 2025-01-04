@@ -6,14 +6,14 @@
 
   /* Common color */
   --text-color: #34343c;
-  --text-muted-color: #757575;
+  --text-muted-color: #70d2fa;  //skyblue
   --text-muted-highlight-color: inherit;
   --heading-color: #2a2a2a;
   --label-color: #585858;
   --blockquote-border-color: #eeeeee;
   --blockquote-text-color: #757575;
-  --link-color: #0056b2;
-  --link-underline-color: #dee2e6;
+  --link-color: #0089e7;
+  --link-underline-color: skyblue;
   --button-bg: #ffffff;
   --btn-border-color: #e9ecef;
   --btn-backtotop-color: #686868;
@@ -47,9 +47,9 @@
   /* Topbar */
   --topbar-bg: rgb(255, 255, 255, 0.7);
   --topbar-text-color: rgb(78, 78, 78);
-  --search-border-color: rgb(240, 240, 240);
-  --search-icon-color: #c2c6cc;
-  --input-focus-border-color: #b8b8b8;
+  --search-border-color: lightskyblue;
+  --search-icon-color: #0089e7;
+  --input-focus-border-color: #0089e7;  //deepskyblue
 
   /* Home page */
   --post-list-text-color: dimgray;
