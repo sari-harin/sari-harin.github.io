@@ -3,6 +3,12 @@
 @use '../abstracts/breakpoints' as bp;
 @use '../abstracts/placeholders';
 @import url('https://fonts.googleapis.com/css2?family=Gothic+A1&family=Jersey+15&display=swap');
+@font-face {
+  font-family: 'DungGeunMo';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/DungGeunMo.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
 
 $btn-border-width: 3px;
 $btn-mb: 0.5rem;
