@@ -13,6 +13,14 @@
 - type: rss
   icon: "fas fa-rss"
   noblank: true
+
+- type: velog
+  icon: "fas fa-v"
+  url:  'https://velog.io/@sari-gom-tang/posts'  
+
+# - type: rss
+#   icon: "fas fa-rss"
+#   noblank: true
 # Uncomment and complete the url below to enable more contact options
 #
 # - type: mastodon
