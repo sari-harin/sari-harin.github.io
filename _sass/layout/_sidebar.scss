@@ -73,6 +73,8 @@ $sidebar-display: 'sidebar-display'; /* the attribute for sidebar display */
     transform: translateZ(0); /* fixed the zoom in Safari */
 
     @include bp.sm {
+      border-radius: 50%;
+      overflow: hidden;  
       width: 7rem;
       height: 7rem;
     }
@@ -110,8 +112,8 @@ $sidebar-display: 'sidebar-display'; /* the attribute for sidebar display */
     @extend %sidebar-link-hover;
 
     font-family: "DungGeunMo" !important;
-    font-weight: 700;
-    font-size: 2.5rem;
+    font-weight: 500;
+    font-size: 2.3rem;
     line-height: 1.2;
     letter-spacing: 0.25px;
     margin-top: 1.25rem;
