@@ -16,4 +16,8 @@ date: 2025-06-09
 last_modified_at: 2025-06-09
 ---
 
+![이미지 설명](https://github.com/sari-harin/blog-imgs/blob/main/git1.png)
+
 test
+
+Yara 룰이 뭔지?
