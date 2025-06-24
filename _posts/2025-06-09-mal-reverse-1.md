@@ -7,7 +7,7 @@ writer: sari
 categories:
   - 악성코드 분석
 tags:
-  - [리버스 엔지니어링]
+  - [리버스 엔지니어링, 보안, 악성코드]
 
 toc: true
 toc_sticky: true
