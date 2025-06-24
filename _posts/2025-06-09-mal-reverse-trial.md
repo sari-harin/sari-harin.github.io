@@ -16,7 +16,7 @@ date: 2025-06-09
 last_modified_at: 2025-06-09
 ---
 
-![이미지 설명](https://github.com/sari-harin/blog-imgs/blob/main/git1.png)
+![Image](https://github.com/user-attachments/assets/575d379a-cd68-4f83-b69a-76b7801bf512)
 
 test
 
