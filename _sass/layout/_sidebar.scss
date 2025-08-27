@@ -119,7 +119,7 @@ $sidebar-display: 'sidebar-display'; /* the attribute for sidebar display */
     margin-top: 1.25rem;
     margin-bottom: 0.5rem;
     width: fit-content;
-    color: #2D6C74;
+    color: #ffd000;
   }
 
   .site-subtitle {
@@ -138,7 +138,7 @@ $sidebar-display: 'sidebar-display'; /* the attribute for sidebar display */
     margin-bottom: 2rem;
 
     li.nav-item {
-      opacity: 0.9;
+      opacity: 1;
       width: 100%;
 
       @include mx.pl-pr(1.5rem);
