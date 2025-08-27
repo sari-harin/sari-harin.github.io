@@ -8,13 +8,13 @@
 
   /* Common color */
   --text-color: rgb(175, 176, 177);
-  --text-muted-color: #75babd;
+  --text-muted-color: #868686;
   --text-muted-highlight-color: #aeaeae;
   --heading-color: #cccccc;
   --label-color: #a7a7a7;
   --blockquote-border-color: rgb(66, 66, 66);
   --blockquote-text-color: #868686;
-  --link-color: #1c6269;
+  --link-color: rgb(138, 180, 248);
   --link-underline-color: rgb(82, 108, 150);
   --button-bg: #1e1e1e;
   --btn-border-color: #2e2f31;
@@ -36,18 +36,18 @@
   --site-subtitle-color: #868686;
   --sidebar-bg: #1e1e1e;
   --sidebar-border-color: #292929;
-  --sidebar-muted-color: #85a0a4;
+  --sidebar-muted-color: #868686;
   --sidebar-active-color: rgb(255, 255, 255, 0.95);
   /*--sidebar-hover-bg: #262626;*/
-  /*--sidebar-btn-bg: #232328;*/s
+  /*--sidebar-btn-bg: #232328;*/
   --sidebar-btn-color: #ffffff;
   --avatar-border-color: rgb(206, 206, 206, 0.9);
 
   /* Topbar */
   --topbar-bg: rgb(27, 27, 30, 0.64);
   --topbar-text-color: var(--text-color);
-  --search-border-color: #a9c5c9;
-  --search-icon-color: #266d74;
+  --search-border-color: rgb(55, 55, 55);
+  --search-icon-color: rgb(100, 102, 105);
   --input-focus-border-color: rgb(112, 114, 115);
 
   /* Home page */
