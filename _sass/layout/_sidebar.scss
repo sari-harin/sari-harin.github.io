@@ -68,13 +68,13 @@ $sidebar-display: 'sidebar-display'; /* the attribute for sidebar display */
     display: block;
     width: 6.5rem;
     height: 6.5rem;
-    overflow: hidden;
+    /*overflow: hidden;*/
     /*box-shadow: var(--avatar-border-color) 0 0 0 2px;*/
     transform: translateZ(0); /* fixed the zoom in Safari */
 
     @include bp.sm {
-      border-radius: 50%;
-      overflow: hidden;  
+      /*border-radius: 50%;*/
+      /*overflow: hidden;  */
       width: 7rem;
       height: 7rem;
     }
@@ -119,12 +119,12 @@ $sidebar-display: 'sidebar-display'; /* the attribute for sidebar display */
     margin-top: 1.25rem;
     margin-bottom: 0.5rem;
     width: fit-content;
-    color: #ffd000;
+    color: white;
   }
 
   .site-subtitle {
     font-size: 95%;
-    color: white;
+    color: #ffd000;
     font-weight: 700;
     margin-top: 0.25rem;
     word-spacing: 1px;
