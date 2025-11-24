@@ -20,7 +20,8 @@ last_modified_at: 2025-11-24
 ## 1 / HelloWorld.exe 디버깅
 
 다음의 프로그램을 Release 모드로 빌드하고, OllyDbg로 열어보자.
-```C++
+
+```cpp
 #include "windows.h"
 #include "tchar.h"
 
