@@ -16,8 +16,7 @@ date: 2025-11-24
 last_modified_at: 2025-11-24
 ---
 
-# 1. Hello World! 리버싱
-## 1 / HelloWorld.exe 디버깅
+# 1. HelloWorld.exe 디버깅
 
 다음의 프로그램을 Release 모드로 빌드하고, OllyDbg로 열어보자.
 
@@ -36,12 +35,30 @@ int _tmain(int argc, _TCHAR* argv[])
 }
 ```
 
-### OllyDbg 화면
+## 1 / OllyDbg 설명
+### Ollydbg 화면
 ![img](https://github.com/sari-harin/blog-imgs/blob/main/reversing-1.png?raw=true)
 1. **Code Window:** Disassembly code를 보여주며 loop, jump 위치 등의 정보를 표시
 2. **Register Window:** CPU Register 값을 표시
 3. **Dump Window:** 프로세스에서 원하는 memory 주소 위치를 표시
 4. **Stack Window:** ESP Register가 가리키는 프로세스의 stack memory를 표시
 
-### EP란?
-EntryPoint: HelloWorld.exe의 실행 시작 주소를 가리킨다.
+### Code Window
+![img](https://github.com/sari-harin/blog-imgs/blob/main/reversing-2.png?raw=true)
+
+| Address | Instruction | Disassembled code | comment |
+|------|---|---|---|
+| 프로세스의 가상 메모리 내 주소 | IA32(or x86) 명령어 | OP code의 어셈블리어 변환본 | 디버거에서 추가된 주석 |
+
+### 기초 명령어와 단축키
+| 명령어 | 단축키 | 설명 |
+|------|---|---|
+| Restart | [Ctrl+F2] | 처음부터 디버깅 재시작 |
+| Step Into | [F7] | 하나의 OP code 실행 + 함수(CALL) 내부로 들어감 |
+| Step Over | [F8] | 하나의 OP code 실행 + 함수 자체를 실행 |
+| Execute till Return | [Ctrl+F9] | 함수 코드 내에서 RETN 명령어까지 실행 |
+
+## 2 / 본격적인 디버깅 시작
+EP에서부터 [F7]을 통해 프로그램의 흐름을 따라가보자.
+
+> **EP(EntryPoint):** HelloWorld.exe의 실행 시작 주소를 가리킨다. 코드 시작점이며, 프로그램 실행 시 CPU에 의해 가장 먼저 실행되는 코드 시작 위치다.
