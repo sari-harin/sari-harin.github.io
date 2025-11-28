@@ -99,9 +99,10 @@ main {
 .post-preview {
   @extend %rounded;
 
-  border: 0;
+  border-left: 0.5rem solid;
+  border-color: #ffbf00 !important;
   background: var(--card-bg);
-  box-shadow: var(--card-shadow);
+  /*box-shadow: var(--card-shadow);*/
 
   &::before {
     @extend %rounded;
