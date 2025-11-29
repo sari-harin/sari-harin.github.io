@@ -1,5 +1,5 @@
 ---
-title:  "1. Hello World! 리버싱"
+title:  "Hello World! 리버싱"
 
 categories:
   	[Reverse Engineering, Core Principles of Reversing]
