@@ -1,13 +1,10 @@
 ---
-title:  "<리버싱 핵심 원리> Hello World! 리버싱"
-excerpt: "리버스 엔지니어링 기초"
-
-writer: sari
+title:  "1. Hello World! 리버싱"
 
 categories:
-  - 리버스 엔지니어링
+  	[Reverse Engineering, Core Principles of Reversing]
 tags:
-  - [입문, 리버스 엔지니어링, 보안, 리버싱 핵심 원리]
+  - [Technical Text, Reverse Engineering, OllyDbg, Security]
 
 toc: true
 toc_sticky: true
