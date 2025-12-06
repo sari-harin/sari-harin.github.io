@@ -212,7 +212,7 @@ $sidebar-display: 'sidebar-display'; /* the attribute for sidebar display */
       justify-content: center;
 
       &:not(:focus-visible) {
-        box-shadow: var(--sidebar-border-color) 0 0 0 1px;
+        /*box-shadow: var(--sidebar-border-color) 0 0 0 1px;*/
       }
 
       &:hover {
