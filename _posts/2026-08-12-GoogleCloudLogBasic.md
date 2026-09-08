@@ -84,7 +84,7 @@ timestamp: '2026-08-24T07:27:02.136622Z'
 ```sh
 methodName: v1.compute.instances.setTags
 ```
-이 필드를 보면 쉽게 알 수 있다.
+이 필드를 보면 쉽게 알 수 있다. 대충 봐도 Tag를 Setting했다는 내용이다.
 
 ```sh
 callerSuppliedUserAgent:
@@ -94,3 +94,65 @@ callerSuppliedUserAgent:
 여기에는 내가 사용한 명령인 `gcloud compute instances add-tags`도 볼 수 있다.
 
 로그를 한번 전체적으로 살펴봤으니, 이제 내일은 어떻게 로그를 더 상세하게 읽어낼 수 있을지를 살펴보자.
+
+## 3. 로그 읽기
+### 1. 누가 수행했는가?
+```
+authenticationInfo:
+    oauthInfo:
+      oauthClientId: [REDACTED]
+    principalEmail: student-01-************@qwiklabs.net
+    principalSubject: user:student-01-************@qwiklabs.net
+```
+API를 호출한 인증 주체를 확인할 수 있다. 따라서 주체는 `student-01-************@qwiklabs.net`이다. Google Skills 실습 계정이다.
+중간의 `oauthInfo`를 볼 때 OAuth를 통해 인증된 클라이언트를 사용해 작업했다는 것도 알 수 있다.
+
+### 2. 어떤 리소스가 변경되었는가?
+```
+resourceName: projects/qwiklabs-gcp-04-XXXXXXXXXXXX/zones/us-west1-c/instances/gcelab2
+```
+```
+resource:
+  labels:
+    instance_id: '[REDACTED]'
+    project_id: qwiklabs-gcp-04-XXXXXXXXXXXX
+    zone: us-west1-c
+  type: gce_instance
+```
+
+리소스가 어떤 프로젝트인지, 어떤 zone인지, 어떤 VM이었는지를 알려준다. 대상은 `gcelab2`라는 Compute Engine VM이다.
+
+### 3. 어디에서 요청했는가
+```
+requestMetadata:
+    callerIp: 35.229.xxx.xxx
+```
+API 요청을 보낸 IP 주소를 확인할 수 있는데, 사용자의 실제 IP 주소는 아니다. 아래 로그와 함께 봤을 때, 사용자가 Google Cloud Shell에서 gcloud를 실행했을 가능성이 있기 때문이다.
+
+```
+invocation-id/[REDACTED] environment/devshell environment-version/None
+      client-os/LINUX client-os-ver/6.6.143 client-pltf-arch/x86_64 interactive/True
+      from-script/False python/3.14.6 term/tmux-256color  (Linux 6.6.143+),gzip(gfe)
+```
+
+
+### 4. 결론적으로 이렇게 볼 수 있다.
+```
+principalEmail
+    ↓
+student-01-...
+
+callerIp
+    ↓
+35.229.169.180
+
+userAgent
+    ↓
+gcloud / Linux / devshell
+
+API
+    ↓
+compute.instances.setTags
+```
+
+## 4. Google Cloud 로그의 고유 필드
